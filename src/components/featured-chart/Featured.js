@@ -3,7 +3,6 @@ import './featured.scss'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {
   CircularProgressbar,
-  CircularProgressbarWithChildren,
   buildStyles
 } from "react-circular-progressbar";
 import ArrowDropUpTwoToneIcon from '@mui/icons-material/ArrowDropUpTwoTone';
