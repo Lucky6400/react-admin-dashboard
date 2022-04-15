@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
                 <div className="charts">
                     <Featured/>
-                    <Normal/>
+                    <Normal title={"Last 6 months revenue"} aspect={2 / 1}/>
                 </div>
                 <div className="list-container">
                     <div className="list-title">Latest Transactions</div>

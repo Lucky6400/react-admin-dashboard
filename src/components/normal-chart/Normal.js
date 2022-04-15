@@ -2,7 +2,7 @@ import React from 'react'
 import './normal.scss'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const Normal = () => {
+const Normal = ({aspect, title}) => {
 
     const data = [
         {
@@ -29,8 +29,8 @@ const Normal = () => {
 
     return (
         <div className="chart">
-            <h4 className="w-100 text-center">Last 6 Month revenue</h4>
-            <ResponsiveContainer width="100%" aspect={2 / 1}>
+            <h4 className="w-100 text-center">{title}</h4>
+            <ResponsiveContainer width="100%" aspect={aspect}>
                 <AreaChart width={730} height={250} data={data}
                     margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                     <defs>
