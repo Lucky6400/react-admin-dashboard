@@ -1,8 +1,8 @@
 import React from 'react'
 import './data-table.scss'
 import { DataGrid } from '@mui/x-data-grid';
-import {userColumns, userRows} from "../../data"
-
+import { userColumns, userRows } from "../../data"
+import { Link } from 'react-router-dom'
 const DataTable = () => {
 
     const actionColumns = [
@@ -13,11 +13,14 @@ const DataTable = () => {
             renderCell: () => {
                 return (
                     <div className="cellWithAction">
-                        <div className="view-button">
-View
-                        </div>
+                        <Link to='/users/:userId'>
+                            <div className="view-button">
+                                View
+                            </div>
+                        </Link>
+
                         <div className="delete-button">
-Delete
+                            Delete
                         </div>
                     </div>
                 )
@@ -62,6 +65,14 @@ Delete
 
     return (
         <div className="dataTable">
+            <div className="w-100 mt-2 d-flex justify-content-center mb-2">
+                <Link to='/users/new'>
+                <button className="btn btn-success rounded-0">
+                    Add New User
+                </button>
+                </Link>
+                
+            </div>
             <DataGrid
                 rows={userRows}
                 columns={userColumns.concat(actionColumns)}

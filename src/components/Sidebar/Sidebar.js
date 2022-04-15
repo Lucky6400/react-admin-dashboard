@@ -12,13 +12,16 @@ import AnchorTwoToneIcon from '@mui/icons-material/AnchorTwoTone';
 import SettingsApplicationsTwoToneIcon from '@mui/icons-material/SettingsApplicationsTwoTone';
 import AccountBoxTwoToneIcon from '@mui/icons-material/AccountBoxTwoTone';
 import LogoutTwoToneIcon from '@mui/icons-material/LogoutTwoTone';
-
+import {Link} from 'react-router-dom'
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
+        <Link to="/">
         <span className="logo text-danger">LUCKY</span>
+        </Link>
+        
       </div>
       <div className="center">
         <ul>
@@ -30,14 +33,19 @@ const Sidebar = () => {
           <p className="title">
             LISTS
           </p>
+          <Link to='/users'>
           <li>
             <PeopleAltTwoToneIcon className="icon" />
             <span>Users</span>
           </li>
-          <li>
+          </Link>
+          <Link to='/products'>
+           <li>
             <Inventory2TwoToneIcon className="icon" />
             <span>Products</span>
           </li>
+          </Link>
+         
           <li>
             <BorderColorTwoToneIcon className="icon" />
             <span>Orders</span>

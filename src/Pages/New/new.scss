@@ -1,4 +1,13 @@
 .new{
+    ::-webkit-file-upload-button{
+        background: red;
+        color: white;
+        height: 130%;
+        &:hover{
+            background: black;
+            color: black;
+        }
+    }
     display: flex;
     .new-container{
         flex: 6;
@@ -16,14 +25,33 @@
             }
             .left{
                 flex: 1;
+                text-align: center;
                 img{
-                    width: 100px;
-                    height: 100px;
+                    width: 200px;
+                    height: 200px;
                     border-radius: 50%;
+                    object-fit: cover;
+                    
                 }
             }
             .right{
                 flex: 2;
+                .form-right{
+                    display: flex;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .btn-red{
+                        background: red;
+                        color: white;
+                        transition: all 0.2s ease-in-out;
+                        &:hover{
+                            filter: brightness(0.7);
+                        
+                        }
+                    }
+                    
+                }
             }
         }
     }

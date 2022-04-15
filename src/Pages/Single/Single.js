@@ -33,8 +33,8 @@ const Single = () => {
                   <span className="item-value">+XX XXX-XXX-XXX</span>
                 </div>
                 <div className="detail-items">
-                  <span className="item-info">Age:</span>
-                  <span className="item-value">19</span>
+                  <span className="item-info">Country:</span>
+                  <span className="item-value">Uganda</span>
                 </div>
                 <div className="detail-items">
                   <span className="item-info">Address:</span> <br />
